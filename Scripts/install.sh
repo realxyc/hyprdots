@@ -214,7 +214,6 @@ EOF
         else
             echo -e "\033[0;32m[systemctl]\033[0m starting ${servChk} system service..."
             sudo systemctl enable "${servChk}.service"
-            sudo systemctl start "${servChk}.service"
         fi
 
     done < "${scrDir}/system_ctl.lst"
