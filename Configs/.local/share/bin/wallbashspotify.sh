@@ -24,6 +24,7 @@ if pkg_installed spotify-launcher && pkg_installed spicetify-cli ; then
         spicetify backup apply
         spicetify config current_theme Sleek
         spicetify config color_scheme Wallbash
+        spicetify config sidebar_config 0
         spicetify apply
     fi
 
