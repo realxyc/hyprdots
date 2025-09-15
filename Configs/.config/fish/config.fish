@@ -2,6 +2,8 @@ set -g fish_greeting
 
 if status is-interactive
     starship init fish | source
+    set -gx STARSHIP_CACHE $HOME/.cache/starship
+    set -gx STARSHIP_CONFIG $HOME/.config/starship/starship.toml
 end
 
 # List Directory
