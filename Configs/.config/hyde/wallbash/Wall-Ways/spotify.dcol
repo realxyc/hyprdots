@@ -13,13 +13,13 @@ main-secondary     = <wallbash_2xa2>
 button             = <wallbash_2xa8>
 button-secondary   = <wallbash_2xa7>
 button-active      = <wallbash_2xa6>
-button-disabled    = <wallbash_pry2>
+button-disabled    = <wallbash_3xa1>
 nav-active         = <wallbash_2xa6>
 play-button        = <wallbash_2xa3>
 tab-active         = <wallbash_pry2>
 notification       = <wallbash_pry1>
 notification-error = <wallbash_pry1>
-playback-bar       = <wallbash_pry1>
+playback-bar       = <wallbash_3xa9>
 misc               = <wallbash_pry2>
 
 ; Description
