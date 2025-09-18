@@ -12,6 +12,7 @@
 <br>
 
   <a href="Source/docs/installation.md"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="Source/docs/updating.md"><kbd> <br> Updating <br> </kbd></a>&ensp;&ensp;
   <a href="#themes"><kbd> <br> Themes <br> </kbd></a>&ensp;&ensp;
   <a href="#styles"><kbd> <br> Styles <br> </kbd></a>&ensp;&ensp;
   <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
@@ -22,32 +23,6 @@
 </div><br><br>
 
 https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
-
-
-
-<a id="updating"></a>  
-<img src="Source/assets/Updating.gif" width="200"/>
----
-
-To update HyDE, you will need to pull the latest changes from GitHub and restore the configs by running the following commands:
-
-```shell
-cd ~/HyDE/Scripts
-git pull
-./install.sh -r
-```
-
-> [!IMPORTANT]
-> Please note that any configurations you made will be overwritten if listed to be done so as listed by `Scripts/restore_cfg.lst`.
-> However, all replaced configs are backed up and may be recovered from in `~/.config/cfg_backups`.
-
-As a second update option, you can use `Hyde restore ...`, which does have a better way of managing restore and backup options.
-For more details, you can refer to [Hyde-cli - dots management wiki](https://github.com/kRHYME7/Hyde-cli/wiki/Dots-Management).
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
 
 <a id="themes"></a>  
 <img src="Source/assets/Themes.gif" width="200"/>
