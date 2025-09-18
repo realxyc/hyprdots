@@ -12,7 +12,7 @@
 <br>
 
   <a href="Source/docs/installation.md"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
-  <a href="Source/docs/updating.md"><kbd> <br>  Updating  <br> </kbd></a>&ensp;&ensp;
+  <a href="Source/docs/updating.md"><kbd> <br> Updating <br> </kbd></a>&ensp;&ensp;
   <a href="Source/docs/themes.md"><kbd> <br> Themes <br> </kbd></a>&ensp;&ensp;
   <a href="Source/docs/styles.md"><kbd> <br> Styles <br> </kbd></a>&ensp;&ensp;
   <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
