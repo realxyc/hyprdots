@@ -21,6 +21,7 @@ if pkg_installed spotify-launcher && pkg_installed spicetify-cli ; then
             -e "/^spotify_launch_flags/ s+=.*$+= $spotfy_flags+g" "$sptfyConf"
 	    curl -L -o ${cacheDir}/landing/Spotify_Sleek.tar.gz https://github.com/amit-0i/hyprdots/raw/main/Source/arcs/Spotify_Sleek.tar.gz
         tar -xzf ${cacheDir}/landing/Spotify_Sleek.tar.gz -C ~/.config/spicetify/Themes/
+        curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
         spicetify backup apply
         spicetify config current_theme Sleek
         spicetify config color_scheme Wallbash
