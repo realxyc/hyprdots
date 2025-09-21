@@ -21,3 +21,5 @@ spicetify-cli                                          # cli to customize spotif
 
 # --------------------------------------------------- // Apps
 # neovim                                               # vim based text editor
+# helium-browser-bin                                   # chromium based browser
+# vesktop-bin                                          # third-party discord client 
