@@ -68,7 +68,7 @@ fi
 
 if ! $run_browser; then
   rules_file="$HOME/.config/hypr/windowrules.conf"
-  target_rule='windowrulev2 = opacity 1.00 $& 0.80 1,class:^(zen)$'
+  target_rule='windowrule = opacity 1.00 0.80 1,class:^(zen)$'
 
   if [[ -f "$rules_file" ]]; then
     if grep -q "class:^(zen)" "$rules_file" && ! grep -Fxq "$target_rule" "$rules_file"; then
