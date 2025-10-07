@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+export reload_flag=1
 
 
 #// lock instance
