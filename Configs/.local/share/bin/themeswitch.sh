@@ -115,6 +115,28 @@ if pkg_installed flatpak ; then
     fi
 fi
 
+#// cursor
+
+cursorTheme="$(
+{ grep -q "^[[:space:]]*\$CURSOR[-_]THEME\s*=" "${hydeThemeDir}/hypr.theme" && grep "^[[:space:]]*\$CURSOR[-_]THEME\s*=" "${hydeThemeDir}/hypr.theme" | cut -d '=' -f2 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' ;}
+)"
+
+cursorSize="$(
+{ grep -q "^[[:space:]]*\$CURSOR[-_]SIZE\s*=" "${hydeThemeDir}/hypr.theme" && grep "^[[:space:]]*\$CURSOR[-_]SIZE\s*=" "${hydeThemeDir}/hypr.theme" | cut -d '=' -f2 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' ;}
+)"
+
+if [ -z "$cursorTheme" ]; then
+    cursorTheme="Bibata-Modern-Ice"
+fi
+
+if [ -z "$cursorSize" ]; then
+    cursorSize=18
+fi
+
+gsettings set org.gnome.desktop.interface cursor-theme "${cursorTheme}"
+gsettings set org.gnome.desktop.interface cursor-size "${cursorSize}"
+hyprctl setcursor "${cursorTheme}" "${cursorSize}"
+
 #// wallpaper
 
 "${scrDir}/swwwallpaper.sh" -s "$(readlink "${hydeThemeDir}/wall.set")"
