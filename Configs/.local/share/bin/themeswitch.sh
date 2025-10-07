@@ -88,19 +88,25 @@ sed -i "/^Theme=/c\Theme=${gtkIcon}" "${confDir}/kdeglobals"
 
 #// gtk3
 
-sed -i "/^gtk-theme-name=/c\gtk-theme-name=${gtkTheme}" $confDir/gtk-3.0/settings.ini
-sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${gtkIcon}" $confDir/gtk-3.0/settings.ini
+themeDir=~/.local/share/themes
 
+if [ "${enableWallDcol}" -eq 0 ] ; then
+    sed -i "/^gtk-theme-name=/c\gtk-theme-name=${gtkTheme}" $confDir/gtk-3.0/settings.ini
+    sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${gtkIcon}" $confDir/gtk-3.0/settings.ini
+else
+    sed -i "/^gtk-theme-name=/c\gtk-theme-name=Wallbash-Gtk" $confDir/gtk-3.0/settings.ini
+    sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${gtkIcon}" $confDir/gtk-3.0/settings.ini
+fi
 
 #// gtk4
 
-if [ -d /run/current-system/sw/share/themes ] ; then
-    themeDir=/run/current-system/sw/share/themes
+if [ "${enableWallDcol}" -eq 0 ] ; then
+    rm -rf "${confDir}/gtk-4.0"
+    ln -s "${themeDir}/${gtkTheme}/gtk-4.0" "${confDir}/gtk-4.0"
 else
-    themeDir=~/.local/share/themes
+    rm -rf "${confDir}/gtk-4.0"
+    ln -s "${themeDir}/Wallbash-Gtk/gtk-4.0" "${confDir}/gtk-4.0"
 fi
-rm -rf "${confDir}/gtk-4.0"
-ln -s "${themeDir}/${gtkTheme}/gtk-4.0" "${confDir}/gtk-4.0"
 
 
 #// flatpak GTK
