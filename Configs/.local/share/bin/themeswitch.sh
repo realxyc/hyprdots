@@ -139,6 +139,7 @@ if [ -z "$cursorSize" ]; then
     cursorSize=18
 fi
 
+gsettings set org.gnome.desktop.interface gtk-theme "${gtkTheme}"
 gsettings set org.gnome.desktop.interface cursor-theme "${cursorTheme}"
 gsettings set org.gnome.desktop.interface cursor-size "${cursorSize}"
 hyprctl setcursor "${cursorTheme}" "${cursorSize}"
