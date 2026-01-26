@@ -76,7 +76,7 @@ else
     Git_Path=${Git_Repo#*://*/}
     Git_Owner=${Git_Path%/*}
     branch_dir=${branch//\//_}
-    Theme_Dir="${cacheDir}/themepatcher/${branch_dir}-${Git_Owner}"
+    Theme_Dir="${cacheDir}/themepatcher/${Fav_Theme}-${Git_Owner}"
 
     if [ -d "$Theme_Dir" ]; then
         print_prompt "Directory $Theme_Dir already exists. Using existing directory."
